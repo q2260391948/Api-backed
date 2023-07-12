@@ -1,9 +1,6 @@
-# 公共配置文件
-# @author <a href="https://github.com/liyupi">程序员鱼皮</a>
-# @from <a href="https://yupi.icu">编程导航知识星球</a>
 spring:
   application:
-    name: springboot-init
+    name: springboot-api
   # 默认 dev 环境
   profiles:
     active: dev
@@ -21,9 +18,9 @@ spring:
   # todo 需替换配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/my_db
-    username: root
-    password: 123456
+    url: jdbc:mysql://47.120.38.180:3306/API_BI
+    username: API_BI
+    password: zxq1314mm
   # Redis 配置
   # todo 需替换配置，然后取消注释
 #  redis:
@@ -45,7 +42,7 @@ spring:
       max-file-size: 10MB
 server:
   address: 0.0.0.0
-  port: 8101
+  port: 8100
   servlet:
     context-path: /api
     # cookie 30 天过期
@@ -86,7 +83,26 @@ wx:
 # todo 需替换配置
 cos:
   client:
-    accessKey: xxx
-    secretKey: xxx
+    accessKey: 123456
+    secretKey: 123456
     region: xxx
     bucket: xxx
+
+api:
+  client:
+    accsee-key: xiaozhang
+    secre-key: zxq1314mm243
+
+
+dubbo:
+  application:
+    name: dubbo-springboot-demo-consumer
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    id: nacos-registry
+    address: nacos://localhost:8848
+
+
+
